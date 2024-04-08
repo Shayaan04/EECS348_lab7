@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>practice 2</title>
+    <h1>EECS 348 Lab Seven Practice Two</h1>
+</head>
+
+
+
+<body>
+    <p id="para", style = "border-style: solid; border-width: 1px;">
+        Paragraph: Aankhein Teri Kitni Haseen Ke Inka Aashiq, Main Ban Gaya Hoon Mujhko Basa Le, Inme Tu Ishq Hai Maula Mere, Maula Mere Maula Mere, Maula Mere. Ke Inka Aashiq, Mein Ban Gaya Hoon Mujhko Basa Le, Inme Tu.
+    </p>
+    <!-- This is the java script code which deals with the changing color functionality of the paragraph-->
+    <script>
+        function change_color() {
+            var para = document.getElementById("para");
+            para.style.borderColor = `rgb(${document.getElementById("borderR").value},${document.getElementById("borderG").value},${document.getElementById("borderB").value})`;
+            para.style.borderWidth = document.getElementById("borderwidth").value;
+            para.style.backgroundColor = `rgb(${document.getElementById("backgroundR").value},${document.getElementById("backgroundG").value},${document.getElementById("backgroundB").value})`;
+        }
+    </script>
+
+ <!--this code get recive the user input and sets it to the id's which are used in the js function coded above-->
+    Border R(0-255): <input type="text" id="borderR">
+    <br>
+    Border G(0-255): <input type="text" id="borderG">
+    <br>
+    Border B(0-255): <input type="text" id="borderB">
+    <br>
+    Border Width: <input type="text" id="borderwidth">
+    <br>
+    Background R(0-255): <input type="text" id="backgroundR">
+    <br>  
+    Background G(0-255): <input type="text" id="backgroundG">
+    <br>
+    Background B(0-255): <input type="text" id="backgroundB">
+    <br>
+    <button onclick="change_color()">Change the color!</button>
+</body>
+
+</html>
